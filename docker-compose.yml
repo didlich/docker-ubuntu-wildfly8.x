@@ -1,0 +1,11 @@
+version: '2.0'
+services:
+  wildfly:
+    image: ubuntu-wildfly8.x
+    container_name: wildfly8.x-instance
+    user: "${USER_ID}"
+    ports:
+     - 18080:8080
+     - 19990:9990
+    volumes:
+     - ${PWD}/shared:/opt/shared
